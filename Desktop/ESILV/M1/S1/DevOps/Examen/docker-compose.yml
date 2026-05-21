@@ -1,0 +1,32 @@
+version: '3.9'
+services:
+  chat-api:
+    build:
+      context: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - cache
+    networks:
+      - chat-network
+
+  chat-ui:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - chat-api
+    networks:
+      - chat-network
+
+  cache:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - chat-network
+
+networks:
+  chat-network:
+    driver: bridge

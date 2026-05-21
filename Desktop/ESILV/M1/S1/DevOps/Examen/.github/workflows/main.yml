@@ -27,4 +27,6 @@ jobs:
 
       - name: Deploy on tag push
         if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: echo "Déploiement en cours..."

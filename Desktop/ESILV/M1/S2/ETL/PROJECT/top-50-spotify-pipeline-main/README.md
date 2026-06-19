@@ -42,7 +42,7 @@ analytics.*               ← données prêtes pour le dashboard (mart_top_track
     ▼
 Streamlit Dashboard       ← visualisation finale
 
-![Architecture Spotify Pipeline](./slides/architecture.png)
+![Architecture Spotify Pipeline](https://raw.githubusercontent.com/ChrisaMendoza/examen_devops/main/Desktop/ESILV/M1/S2/ETL/PROJECT/top-50-spotify-pipeline-main/slides/architecture.png)
 
 Tout le pipeline est orchestré par Apache Airflow (déclenchement toutes les heures).
 ```
